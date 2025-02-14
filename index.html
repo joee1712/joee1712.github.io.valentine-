@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link
+  rel="shortcut icon"
+  href="https://img.icons8.com/fluent/48/000000/like.png"
+  type="image/png"
+/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine's Day 💖</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Floating Emojis -->
+  <div id="floatingEmojis"></div>
+
+  <!-- Music Button -->
+  <button id="musicButton" onclick="toggleMusic()">🔇</button>
+  <audio id="bgMusic" src="music.mp3" loop></audio>
+
+  <!-- Central Box -->
+  <div class="box">
+    
+    <!-- Password Page -->
+    <div id="passwordPage" class="page active">
+      <h1>Password Please! 🫣</h1>
+      <input type="password" id="passwordInput" placeholder="type the password">
+      <button onclick="checkPassword()">Submit</button>
+      <p id="errorMessage" class="hidden"></p>
+    </div>
+
+    <!-- Asking Page -->
+    <div id="askingPage" class="page">
+      <h1>Will you be my Valentine? 💖</h1>
+      <button onclick="nextPage('sliderPage')">Yes</button>
+      <button id="noButton" onclick="handleNo()">No</button>
+    </div>
+
+    <!-- Slider Page -->
+    <div id="sliderPage" class="page">
+      <h1>How much do you love me? 😗</h1>
+      <input type="range" id="happinessSlider" min="0" max="100" value="0" oninput="updateSlider()">
+      <p id="sliderText">move the slider! (0%)</p>
+      <button id="sliderNext" onclick="checkSlider()" disabled>Next</button>
+    </div>
+
+    <!-- Personal Letter Page -->
+    <div id="letterPage" class="page">
+      <h1>To My Valentine 💌</h1>
+      <div class="letter">
+        <p>Dear noney,</p>
+        <p>Happy Valentine's Day!</p>
+        <p>Every moment with you is special, and I can't imagine my life without you. You're my favorite person, my safe place, and the reason behind my happiest smiles.</p>
+        <p>Thank you for being you, for loving me, and for making life so beautiful. I love you more than words can say, and I can't wait for all the memories we'll create together. 💕</p>
+        <p>Forever yours,</p>
+        <p>Your youssey</p>
+        <p>i Love you soooo much💖</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
